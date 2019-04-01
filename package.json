@@ -1,10 +1,10 @@
 {
   "name": "@sanzaru/autover",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple tool to automatically increment the version number inside the pakage.json",
   "private": false,
   "bin": {
-    "myapp": "dist/autover.js"
+    "autover": "dist/autover.js"
   },
   "main": "src/main.js",
   "scripts": {
