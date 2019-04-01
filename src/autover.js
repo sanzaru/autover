@@ -63,7 +63,7 @@ class AutoVer {
      */
     _writeNewContent() {
         this.packageJsonContent.version = this._formatVersion()
-        fs.writeFileSync(packagePath, JSON.stringify(this.packageJsonContent, null, 4))
+        fs.writeFileSync(packagePath, JSON.stringify(this.packageJsonContent, null, 2))
     }
 
     /**

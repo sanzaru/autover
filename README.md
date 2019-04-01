@@ -6,7 +6,7 @@ Simple tool to automatically increment the version number inside a pakage.json f
 ## Requirements
 * NodeJS >= 10.x.x: http://nodejs.org
 
-> The script could alsp run on older versions of NodeJS, but were never tested with them.
+> The script could also run on older versions of NodeJS, but were never tested with them.
 
 ## Getting started
 Install the package
