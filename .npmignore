@@ -1,1 +1,4 @@
+.babelrc
+.gitignore
 src
+dist/.empty
