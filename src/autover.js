@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * AutoVer
  * Simple tool to automatically increment the version number inside the pakage.json
@@ -16,7 +18,7 @@ const packagePath = path.join(cwd, '/package.json')
  * The main AutoVer class
  * @class
  */
-module.exports = class AutoVer {
+class AutoVer {
     constructor() {
         // Read package.json content
         this.packageJsonContent = null
@@ -61,7 +63,7 @@ module.exports = class AutoVer {
      */
     _writeNewContent() {
         this.packageJsonContent.version = this._formatVersion()
-        fs.writeFileSync(packagePath, JSON.stringify(this.packageJsonContent, null, "\t"))
+        fs.writeFileSync(packagePath, JSON.stringify(this.packageJsonContent, null, 4))
     }
 
     /**
@@ -127,4 +129,11 @@ module.exports = class AutoVer {
             this.scheme.patch = false
         }
     }
+}
+
+// Start
+try {
+    new AutoVer()
+} catch (e) {
+    console.error(e)
 }

@@ -17,7 +17,7 @@ npm install @sanzaru/autover --save-dev
 To increment the version number you can either run the script manually
 
 ```sh
-./node_modules/@sanzaru/autover/dist/autover.js
+node node_modules/@sanzaru/autover/dist/autover.js
 ```
 
 or via npm script

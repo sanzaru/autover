@@ -1,25 +1,33 @@
 {
-  "name": "@sanzaru/autover",
-  "version": "0.0.3",
-  "description": "Simple tool to automatically increment the version number inside the pakage.json",
-  "private": false,
-  "bin": {
-    "autover": "dist/autover.js"
-  },
-  "main": "src/main.js",
-  "scripts": {
-    "build": "./node_modules/.bin/babel src --out-file dist/autover.js"
-  },
-  "keywords": [],
-  "author": "Martin Albrecht <martin.albrecht@javacoffee.de>",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "babel-preset-minify": "^0.5.0"
-  },
-  "dependencies": {
-    "@babel/polyfill": "^7.4.0"
-  }
+	"name": "@sanzaru/autover",
+	"version": "0.0.4",
+	"description": "Simple tool to automatically increment the version number inside the pakage.json",
+	"keywords": [],
+	"author": "Martin Albrecht <martin.albrecht@javacoffee.de>",
+	"license": "MIT",
+	"private": false,
+	"bin": {
+		"autover": "dist/autover.js"
+	},
+	"main": "src/main.js",
+	"scripts": {
+		"build": "./node_modules/.bin/babel src --out-file dist/autover.js"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm build && git add dist",
+			"pre-push": ""
+		}
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.2.3",
+		"@babel/core": "^7.4.0",
+		"@babel/preset-env": "^7.4.2",
+		"babel-plugin-shebang": "^1.0.0",
+		"babel-preset-minify": "^0.5.0",
+		"husky": "^1.3.1"
+	},
+	"dependencies": {
+		"@babel/polyfill": "^7.4.0"
+	}
 }
