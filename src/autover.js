@@ -52,7 +52,9 @@ class AutoVer {
         const parts = []
 
         for (let key in this.version) {
-            parts.push(this.version[key])
+            if (this.version.hasOwnProperty(key)) {
+                parts.push(this.version[key])
+            }
         }
 
         return parts.join('.')
@@ -72,7 +74,7 @@ class AutoVer {
      */
     _readPackageJson() {
         if (fs.existsSync(packagePath)) {
-            this.packageJsonContent = JSON.parse(fs.readFileSync(packagePath))
+            this.packageJsonContent = JSON.parse(fs.readFileSync(packagePath).toString())
         } else {
             throw (new Error(`Cannot find package.json in ${packagePath}`))
         }
