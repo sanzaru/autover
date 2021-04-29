@@ -1,6 +1,6 @@
 {
   "name": "@sanzaru/autover",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Simple tool to automatically increment the version number inside the pakage.json",
   "keywords": [],
   "author": "Martin Albrecht <martin.albrecht@javacoffee.de>",
@@ -19,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm build",
+      "pre-commit": "npm run build",
       "pre-push": ""
     }
   },
@@ -31,6 +31,5 @@
     "babel-plugin-shebang": "^1.0.0",
     "babel-preset-minify": "^0.5.1",
     "husky": "^4.2.5"
-  },
-  "dependencies": {}
+  }
 }
